@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titan Security Administration Panel</title>
+    <style>
+        /* Modern Corporate Aesthetic */
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            background-color: #f4f6f9; 
+            color: #333333; 
+            margin: 0; 
+            padding: 20px;
+        }
+        
+        /* Container Dashboard Card */
+        .dashboard-card {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e1e4e8;
+            overflow: hidden;
+        }
+
+        /* Top Header Area */
+        .db-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid #e1e4e8;
+            background-color: #ffffff;
+        }
+        
+        .db-header h1 { 
+            margin: 0;
+            font-size: 1.4rem; 
+            color: #1a1f2c;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .db-header p {
+            margin: 4px 0 0 0;
+            font-size: 0.85rem;
+            color: #626d7a;
+        }
+
+        /* Responsive Table Formatting */
+        .table-container { 
+            overflow-x: auto; 
+        }
+        
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            min-width: 650px; 
+        }
+        
+        th, td { 
+            padding: 14px 24px; 
+            text-align: left; 
+            border-bottom: 1px solid #e1e4e8; 
+            font-size: 0.9rem; 
+        }
+        
+        th { 
+            background-color: #f8f9fa; 
+            color: #4a5568; 
+            text-transform: uppercase; 
+            font-size: 0.75rem; 
+            font-weight: 700;
+            letter-spacing: 0.5px; 
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background-color: #fafbfc;
+        }
+        
+        /* Clean Technical Styling for Data */
+        .username {
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .id-text { 
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; 
+            color: #718096; 
+            font-size: 0.85rem;
+            background: #f1f3f5;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+        
+        /* Soft, Professional Status Badges */
+        .badge { 
+            padding: 6px 12px; 
+            border-radius: 20px; 
+            font-weight: 600; 
+            font-size: 0.75rem; 
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .verified { background: #fee2e2; color: #991b1b; }
+        .pending { background: #fef3c7; color: #92400e; }
+        .redflag { background: #ffedd5; color: #9a3412; }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .verified .dot { background-color: #b91c1c; }
+        .pending .dot { background-color: #d97706; }
+        .redflag .dot { background-color: #ea580c; }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-card">
+        <div class="db-header">
+            <h1>🛡️ Titan Security Integrity Database</h1>
+            <p>Official repository log for user compliance investigations and server reporting metadata.</p>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Target Username</th>
+                        <th>User ID</th>
+                        <th>Offence / Incident Notes</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Row 1 -->
+                    <tr>
+                        <td class="username">HackerGuy99</td>
+                        <td><span class="id-text">482910482</span></td>
+                        <td>Server flinging vulnerabilities inside NDS maps</td>
+                        <td><span class="badge verified"><span class="dot"></span>VERIFIED</span></td>
+                    </tr>
+                    <!-- Row 2 -->
+                    <tr>
+                        <td class="username">RandomUser22</td>
+                        <td><span class="id-text">920184711</span></td>
+                        <td>Reported via global chat queue inside Pls Donate</td>
+                        <td><span class="badge pending"><span class="dot"></span>PENDING</span></td>
+                    </tr>
+                    <!-- Row 3 -->
+                    <tr>
+                        <td class="username">AltAccountX</td>
+                        <td><span class="id-text">110294833</span></td>
+                        <td>New account flags with rapid movement telemetry hints</td>
+                        <td><span class="badge redflag"><span class="dot"></span>RED FLAG</span></td>
+                    </tr>
+                    <!-- Row 4 -->
+                    <tr>
+                        <td class="username">UserPlaceholder4</td>
+                        <td><span class="id-text">000000004</span></td>
+                        <td>Awaiting community patrol verification parameters</td>
+                        <td><span class="badge pending"><span class="dot"></span>PENDING</span></td>
+                    </tr>
+                    <!-- Row 5 -->
+                    <tr>
+                        <td class="username">UserPlaceholder5</td>
+                        <td><span class="id-text">000000005</span></td>
+                        <td>Confirmed off-site malicious advertising link distribution</td>
+                        <td><span class="badge verified"><span class="dot"></span>VERIFIED</span></td>
+                    </tr>
+                    <!-- Row 6 -->
+                    <tr>
+                        <td class="username">UserPlaceholder6</td>
+                        <td><span class="id-text">000000006</span></td>
+                        <td>Suspected chat filter bypass attempts in main lobby</td>
+                        <td><span class="badge redflag"><span class="dot"></span>RED FLAG</span></td>
+                    </tr>
+                    <!-- Row 7 -->
+                    <tr>
+                        <td class="username">UserPlaceholder7</td>
+                        <td><span class="id-text">000000007</span></td>
+                        <td>Awaiting verification on automated donation scam claim</td>
+                        <td><span class="badge pending"><span class="dot"></span>PENDING</span></td>
+                    </tr>
+                    <!-- Row 8 -->
+                    <tr>
+                        <td class="username">UserPlaceholder8</td>
+                        <td><span class="id-text">000000008</span></td>
+                        <td>Teleportation exploitation during disaster initialisation phase</td>
+                        <td><span class="badge verified"><span class="dot"></span>VERIFIED</span></td>
+                    </tr>
+                    <!-- Row 9 -->
+                    <tr>
+                        <td class="username">UserPlaceholder9</td>
+                        <td><span class="id-text">000000009</span></td>
+                        <td>High frequency account switches from similar subnet</td>
+                        <td><span class="badge redflag"><span class="dot"></span>RED FLAG</span></td>
+                    </tr>
+                    <!-- Row 10 -->
+                    <tr>
+                        <td class="username">UserPlaceholder10</td>
+                        <td><span class="id-text">000000010</span></td>
+                        <td>Community word-of-mouth report under evaluation</td>
+                        <td><span class="badge pending"><span class="dot"></span>PENDING</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
